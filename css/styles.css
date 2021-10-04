@@ -108,7 +108,7 @@ img {
 .contacts{
   display: flex;
 }
-.contacts-item{
+.contacts-item:not(:first-child) {
   margin-left: 50px;
 }
 
@@ -223,10 +223,12 @@ img {
   background: var(--blue);
   margin-top: 30px;
   width: 200px;
+  height: 50px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
+  cursor: pointer;
   color: var(--white);
 }
 .button:hover,
@@ -253,6 +255,7 @@ img {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
+  line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
@@ -264,21 +267,10 @@ img {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
+  line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--gray);
 }
-.about-us {
- font-family: Roboto;
- font-style: normal;
- font-weight: 700;
- font-size: 36px;
- text-align: center;
- letter-spacing: 0.03em;
- text-decoration: none;
- color: var(--black);
- margin-bottom: 50px;
-}
-
 .work {
 display: flex;
 flex-wrap: wrap;
@@ -292,16 +284,19 @@ margin-top: -30px;
  margin-top: 30px;
  }  
 
-.our-team {
+.section-title {
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--black);
+  margin-top: 0;
   margin-bottom: 50px;
+
 }
 .team-name {
   display: block;
@@ -363,6 +358,7 @@ background-color: #f5f4fa;
   background: var(--dark-gray);  
   padding-bottom: 60px;
   padding-top: 60px;
+  
 }
 
 .footer-logo {
@@ -389,18 +385,16 @@ background-color: #f5f4fa;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-
   text-decoration: none;
   letter-spacing: 0.03em;
   color: var(--white);
+  
 }
+.adress-footer {
+  margin-bottom: 9px;}
 
 .adress-footer:hover {
   color: var(--blue);
-}
-
-.our-contacts .list{
-  margin-top: 9px;
 }
 
 .mail-footer {
@@ -411,7 +405,9 @@ background-color: #f5f4fa;
   letter-spacing: 0.03em;
   color: var(--whitegray);
 }
-
+.mail-footer {
+  margin-bottom: 9px;
+}
 .mail-footer:hover {
   color: var(--blue);
 }
@@ -420,7 +416,6 @@ background-color: #f5f4fa;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  
   text-decoration: none;
   letter-spacing: 0.03em;
   color: var(--whitegray);
@@ -428,6 +423,9 @@ background-color: #f5f4fa;
 .tel-footer:hover {
   color: var(--blue);
 }
+.tel-footer:not(:last-child) {
+  margin-bottom: 10px;}
+
 .section-portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -439,27 +437,20 @@ background-color: #f5f4fa;
   padding-left: 22px;
   padding-top: 6px;
   padding-bottom: 6px;
-
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
- 
   text-align: center;
   letter-spacing: 0.03em;
 }
-.btn-p list:not(:first-child) {
-  margin-left: 8px;
-}
+
 
 .portfolio-button{
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 50px;
-  
 }
 .portfolio-name {
   clip: rect(1px, 1px, 1px, 1px);
@@ -480,11 +471,11 @@ background-color: #f5f4fa;
   outline: none;
   border: none;
   color: var(--black);
-  padding: 6px 22px;
-  margin-left: 8px;
-  margin-right: 8px;
+  padding: 6px 22px;  
 }
-
+.button-portf:not(:first-child) {
+  margin-left: 8px;
+}
 .button-portf:hover,
 .button-portf:focus {
   color: var(--white);
@@ -501,38 +492,37 @@ background-color: #f5f4fa;
  margin-top: 30px;
  margin-left: 30px;
 }
+.link-info{
+  display: block;
+}
 .card-container{
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 24px;
   padding-left: 24px;
   border: 1px solid#EEEEEE;
-  border-top: 1px solid rgba(255,255,255,0);
+  border-top: 1px solid rgba(255,255,255,0); 
 }
-
 .port-item {
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
+  line-height: 36px;
   letter-spacing: 0.06em;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-
 .project-description {
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
+  line-height: 30px;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
- 
-.footer {
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
-.footer-logo link {
-  display: block;
-  margin-bottom: 20px;
-}
+
